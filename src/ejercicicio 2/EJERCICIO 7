@@ -1,0 +1,38 @@
+interface Producto {
+    desc: string;
+    precio: number;
+}
+
+const telefono: Producto = {
+    desc: 'Nokia Al',
+    precio: 150
+}
+
+const tableta: Producto = {
+    desc: 'ipad Air',
+    precio: 350
+}
+
+function calculaISV (productos: Producto [] ) {
+    let total = 0;
+
+    productos.forEach( ( producto ) => {
+        total += producto.precio;
+    })
+    
+    return total * 0.15;
+}
+ 
+const {desc, precio}=tableta
+const articulo =[telefono];
+const Isv=calculaISV(articulo);
+const articulos2 = [tableta];
+const  isv2=calculaISV(articulos2);
+
+
+console.log('Articulo:', telefono.desc)
+console.log('Precio',telefono.precio)
+console.log(Isv)
+console.log('El articulo es:', tableta.desc)
+console.log('El precio es:', tableta.precio)
+console.log('El isv del producto es:', isv2)
